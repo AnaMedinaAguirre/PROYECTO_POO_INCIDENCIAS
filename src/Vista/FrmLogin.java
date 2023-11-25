@@ -1,18 +1,9 @@
 package Vista;
 
-import java.awt.Image;
-import java.awt.Toolkit;
-
 public class FrmLogin extends javax.swing.JFrame {
 
     public FrmLogin() {
         initComponents();
-    }
-
-    @Override
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/MediCare2.png"));
-        return retValue;
     }
     
     @SuppressWarnings("unchecked")

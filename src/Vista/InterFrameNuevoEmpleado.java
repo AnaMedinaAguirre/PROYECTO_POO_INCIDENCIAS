@@ -35,7 +35,7 @@ public class InterFrameNuevoEmpleado extends javax.swing.JInternalFrame {
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jbtnGuardar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel11 = new javax.swing.JLabel();
@@ -96,9 +96,9 @@ public class InterFrameNuevoEmpleado extends javax.swing.JInternalFrame {
         jLabel9.setText("ÁREA:");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 300, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("GUARDAR");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 120, 50));
+        jbtnGuardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jbtnGuardar.setText("GUARDAR");
+        jPanel1.add(jbtnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 120, 50));
 
         jLabel10.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel10.setText("FECHA DE REGISTRO:");
@@ -132,7 +132,6 @@ public class InterFrameNuevoEmpleado extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
@@ -155,5 +154,6 @@ public class InterFrameNuevoEmpleado extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    public javax.swing.JButton jbtnGuardar;
     // End of variables declaration//GEN-END:variables
 }

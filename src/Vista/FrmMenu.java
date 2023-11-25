@@ -40,7 +40,8 @@ public class FrmMenu extends javax.swing.JFrame {
         MenuItemGestionarTipos = new javax.swing.JMenuItem();
         MenuItemNuevaIncidencia = new javax.swing.JMenuItem();
         MenuItemGestionarIncidencias = new javax.swing.JMenuItem();
-        MenuItemDetalleSolucion = new javax.swing.JMenuItem();
+        MenuItemNuevoDetalleSolucion = new javax.swing.JMenuItem();
+        MenuItemGestionarDetalleSolucion = new javax.swing.JMenuItem();
         MenuItemSeguimiento = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         MenuItemRegistroAreas = new javax.swing.JMenuItem();
@@ -141,15 +142,20 @@ public class FrmMenu extends javax.swing.JFrame {
         });
         jMenu2.add(MenuItemGestionarIncidencias);
 
-        MenuItemDetalleSolucion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        MenuItemDetalleSolucion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/solucion.png"))); // NOI18N
-        MenuItemDetalleSolucion.setLabel("Destalles de Solución");
-        MenuItemDetalleSolucion.addActionListener(new java.awt.event.ActionListener() {
+        MenuItemNuevoDetalleSolucion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        MenuItemNuevoDetalleSolucion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/solucion.png"))); // NOI18N
+        MenuItemNuevoDetalleSolucion.setText("Nuevo destalle de Solución");
+        MenuItemNuevoDetalleSolucion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MenuItemDetalleSolucionActionPerformed(evt);
+                MenuItemNuevoDetalleSolucionActionPerformed(evt);
             }
         });
-        jMenu2.add(MenuItemDetalleSolucion);
+        jMenu2.add(MenuItemNuevoDetalleSolucion);
+
+        MenuItemGestionarDetalleSolucion.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        MenuItemGestionarDetalleSolucion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/solution.png"))); // NOI18N
+        MenuItemGestionarDetalleSolucion.setText("Gestionar detalle de Solución");
+        jMenu2.add(MenuItemGestionarDetalleSolucion);
 
         MenuItemSeguimiento.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         MenuItemSeguimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/follow-up.png"))); // NOI18N
@@ -282,10 +288,10 @@ public class FrmMenu extends javax.swing.JFrame {
         this.MostrarEnEscritorio(ifni);
     }//GEN-LAST:event_MenuItemNuevaIncidenciaActionPerformed
 
-    private void MenuItemDetalleSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemDetalleSolucionActionPerformed
+    private void MenuItemNuevoDetalleSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemNuevoDetalleSolucionActionPerformed
         InterFrameDetallesSolucion ifds = new InterFrameDetallesSolucion();
         this.MostrarEnEscritorio(ifds);
-    }//GEN-LAST:event_MenuItemDetalleSolucionActionPerformed
+    }//GEN-LAST:event_MenuItemNuevoDetalleSolucionActionPerformed
 
     private void MenuItemSeguimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemSeguimientoActionPerformed
         InterFrameSeguimientoIncidencia ifsi = new InterFrameSeguimientoIncidencia();
@@ -338,22 +344,23 @@ public class FrmMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane Escritorio;
+    public javax.swing.JDesktopPane Escritorio;
     private javax.swing.JMenuItem MenuItemCerrar;
-    private javax.swing.JMenuItem MenuItemDetalleSolucion;
-    private javax.swing.JMenuItem MenuItemExportarPDF;
-    private javax.swing.JMenuItem MenuItemGestionarAreas;
-    private javax.swing.JMenuItem MenuItemGestionarEmpleados;
-    private javax.swing.JMenuItem MenuItemGestionarIncidencias;
-    private javax.swing.JMenuItem MenuItemGestionarTipos;
-    private javax.swing.JMenuItem MenuItemNuevaIncidencia;
-    private javax.swing.JMenuItem MenuItemNuevoEmpleado;
-    private javax.swing.JMenuItem MenuItemRegistroAreas;
-    private javax.swing.JMenuItem MenuItemSeguimiento;
-    private javax.swing.JMenuItem MenuItemTiposIncidencias;
+    public javax.swing.JMenuItem MenuItemExportarPDF;
+    public javax.swing.JMenuItem MenuItemGestionarAreas;
+    public javax.swing.JMenuItem MenuItemGestionarDetalleSolucion;
+    public javax.swing.JMenuItem MenuItemGestionarEmpleados;
+    public javax.swing.JMenuItem MenuItemGestionarIncidencias;
+    public javax.swing.JMenuItem MenuItemGestionarTipos;
+    public javax.swing.JMenuItem MenuItemNuevaIncidencia;
+    public javax.swing.JMenuItem MenuItemNuevoDetalleSolucion;
+    public javax.swing.JMenuItem MenuItemNuevoEmpleado;
+    public javax.swing.JMenuItem MenuItemRegistroAreas;
+    public javax.swing.JMenuItem MenuItemSeguimiento;
+    public javax.swing.JMenuItem MenuItemTiposIncidencias;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
-    private javax.swing.JMenu jMenu2;
+    public javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
