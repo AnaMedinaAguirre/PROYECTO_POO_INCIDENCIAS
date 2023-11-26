@@ -6,9 +6,11 @@ import Formatos.*;
 import Vista.*;
 import DAO.*;
 import Modelo.Empleado;
+import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.JOptionPane;
+import java.awt.Toolkit;
 
 public class ControladorLogin implements ActionListener, KeyListener {
 
@@ -21,6 +23,7 @@ public class ControladorLogin implements ActionListener, KeyListener {
         vista.btnIniciarSesion.addActionListener(this);
         vista.txtUsuario.addKeyListener(this);
         vista.txtContraseña.addKeyListener(this);
+        vista.setIconImage(getIconImage());
     }
     
     @Override
@@ -43,6 +46,11 @@ public class ControladorLogin implements ActionListener, KeyListener {
     
     @Override
     public void keyTyped(KeyEvent e) {
+    }
+    
+    public Image getIconImage(){
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/MediCare2.png"));
+        return retValue;
     }
     
     private void Login() {
