@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 public class Mensajes {
 
     public static void M1(String mensaje) {
-        JOptionPane.showInputDialog(null, mensaje);
+        JOptionPane.showMessageDialog(null, mensaje);
     }
 
     public static int M2(String mensaje) {

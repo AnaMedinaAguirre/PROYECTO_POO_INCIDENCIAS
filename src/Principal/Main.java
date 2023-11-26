@@ -30,7 +30,7 @@ public class Main {
     
     public static void main(String[] args) {
         frmLogin = new FrmLogin();
-        controlFrmLogin = new ControladorLogin();
+        controlFrmLogin = new ControladorLogin(frmLogin);
         frmLogin.setVisible(true);
         frmLogin.setLocationRelativeTo(null);
         frmLogin.setTitle("login - GESTOR DE INCIDENCIAS");
