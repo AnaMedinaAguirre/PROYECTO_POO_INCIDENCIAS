@@ -26,6 +26,7 @@ public class ControladorFrmTipoIncidencia implements ActionListener{
             ti = ProcesosFrmTipoIncidencia.LeerDatos(vista);
             crud = new DAO_TipoIncidencia();
             crud.insertarTipoIncidencia(ti);
+            ProcesosFrmTipoIncidencia.LimpiarEntradas(vista);
         }
         
     }

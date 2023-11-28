@@ -32,6 +32,7 @@ public class ControladorFrmEmpleados implements ActionListener{
         if (e.getSource() == vista.btnGuardar) {
             emp = procesos.LeerDatos(vista); // Llama al método de instancia
             crud.insertarEmpleado(emp);
+            ProcesosFrmEmpleado.LimpiarEntradas(vista);
         }
         
     }

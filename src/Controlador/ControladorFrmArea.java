@@ -25,6 +25,7 @@ public class ControladorFrmArea implements ActionListener{
             a = ProcesosFrmAreas.LeerDatos(vista);
             crud = new DAO_Area();
             crud.insertarAreas(a);
+            ProcesosFrmAreas.LimpiarEntradas(vista);
         }
         
     }

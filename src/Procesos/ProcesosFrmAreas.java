@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
         
     public static void Presentacion(InterFrameRegistroAreas frm){
         frm.setVisible(true);
-        frm.setTitle("Mantenimineto Area");
+        frm.setTitle("Ingresar nueva Area");
         frm.datecFecha.setCalendar(cal);
     }
     public static void Estado1(InterFrameGestionarAreas frm){
