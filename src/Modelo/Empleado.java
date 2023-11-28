@@ -10,7 +10,7 @@ public class Empleado {
     private String genero;
     private String telefono;
     private String cargo;
-    private String area;			
+    private int area;			
     private Date fechaRegistro;
     private double sueldo;
     private String usuario;
@@ -40,8 +40,8 @@ public class Empleado {
     public String getCargo() {return cargo;}
     public void setCargo(String cargo) {this.cargo = cargo;}
 
-    public String getArea() {return area;}
-    public void setArea(String area) {this.area = area;}
+    public int getArea() {return area;}
+    public void setArea(int area) {this.area = area;}
 
     public Date getFechaRegistro() {return fechaRegistro;}
     public void setFechaRegistro(Date fechaRegistro) {this.fechaRegistro = fechaRegistro;}

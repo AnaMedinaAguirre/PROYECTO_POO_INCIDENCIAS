@@ -1,29 +1,9 @@
 package Vista;
 
-import java.awt.Dimension;
-import java.awt.Image;
-import java.awt.Toolkit;
-import javax.swing.JInternalFrame;
-
 public class FrmMenu extends javax.swing.JFrame {
 
     public FrmMenu() {
         initComponents();
-        this.setSize(new Dimension(1373, 727));
-        this.setLocationRelativeTo(null);
-        this.setTitle("GESTOR DE INCIDENCIAS");
-    }
-    
-    @Override
-    public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/MediCare2.png"));
-        return retValue;
-    }
-    
-    void MostrarEnEscritorio(JInternalFrame internal){
-        this.Escritorio.repaint();
-        this.Escritorio.add(internal);
-        internal.setVisible(true);
     }
     
     @SuppressWarnings("unchecked")
@@ -61,7 +41,7 @@ public class FrmMenu extends javax.swing.JFrame {
         Escritorio.setLayout(EscritorioLayout);
         EscritorioLayout.setHorizontalGroup(
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1256, Short.MAX_VALUE)
+            .addGap(0, 1355, Short.MAX_VALUE)
         );
         EscritorioLayout.setVerticalGroup(
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,18 +230,15 @@ public class FrmMenu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void MenuItemTiposIncidenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemTiposIncidenciasActionPerformed
-        InterFrameTipoIncidencia ifti = new InterFrameTipoIncidencia();
-        this.MostrarEnEscritorio(ifti);
+
     }//GEN-LAST:event_MenuItemTiposIncidenciasActionPerformed
 
     private void MenuItemNuevoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemNuevoEmpleadoActionPerformed
-        InterFrameNuevoEmpleado ifne = new InterFrameNuevoEmpleado();
-        this.MostrarEnEscritorio(ifne);
+        
     }//GEN-LAST:event_MenuItemNuevoEmpleadoActionPerformed
 
     private void MenuItemGestionarEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGestionarEmpleadosActionPerformed
-        InterFrameGestionarEmpleados ifge = new InterFrameGestionarEmpleados();
-        this.MostrarEnEscritorio(ifge);
+
     }//GEN-LAST:event_MenuItemGestionarEmpleadosActionPerformed
 
     private void MenuItemCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemCerrarActionPerformed
@@ -269,43 +246,34 @@ public class FrmMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuItemCerrarActionPerformed
 
     private void MenuItemGestionarTiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGestionarTiposActionPerformed
-        InterFrameGestionarTipoIncidencia ifgti = new InterFrameGestionarTipoIncidencia();
-        this.MostrarEnEscritorio(ifgti);
+
     }//GEN-LAST:event_MenuItemGestionarTiposActionPerformed
 
     private void MenuItemRegistroAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemRegistroAreasActionPerformed
-        InterFrameRegistroAreas ifra = new InterFrameRegistroAreas();
-        this.MostrarEnEscritorio(ifra);
+
     }//GEN-LAST:event_MenuItemRegistroAreasActionPerformed
 
     private void MenuItemGestionarAreasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGestionarAreasActionPerformed
-        InterFrameGestionarAreas ifga = new InterFrameGestionarAreas();
-        this.MostrarEnEscritorio(ifga);
+
     }//GEN-LAST:event_MenuItemGestionarAreasActionPerformed
 
     private void MenuItemNuevaIncidenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemNuevaIncidenciaActionPerformed
-        InterFrameNuevaIncidencia ifni = new InterFrameNuevaIncidencia();
-        this.MostrarEnEscritorio(ifni);
+
     }//GEN-LAST:event_MenuItemNuevaIncidenciaActionPerformed
 
     private void MenuItemNuevoDetalleSolucionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemNuevoDetalleSolucionActionPerformed
-        InterFrameDetallesSolucion ifds = new InterFrameDetallesSolucion();
-        this.MostrarEnEscritorio(ifds);
     }//GEN-LAST:event_MenuItemNuevoDetalleSolucionActionPerformed
 
     private void MenuItemSeguimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemSeguimientoActionPerformed
-        InterFrameSeguimientoIncidencia ifsi = new InterFrameSeguimientoIncidencia();
-        this.MostrarEnEscritorio(ifsi);
+
     }//GEN-LAST:event_MenuItemSeguimientoActionPerformed
 
     private void MenuItemExportarPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemExportarPDFActionPerformed
-        InterFrameExportarIncidencia ifei = new InterFrameExportarIncidencia();
-        this.MostrarEnEscritorio(ifei);
+
     }//GEN-LAST:event_MenuItemExportarPDFActionPerformed
 
     private void MenuItemGestionarIncidenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGestionarIncidenciasActionPerformed
-        InterFrameGestionarIncidencias ifgi = new InterFrameGestionarIncidencias();
-        this.MostrarEnEscritorio(ifgi);
+
     }//GEN-LAST:event_MenuItemGestionarIncidenciasActionPerformed
 
     /**

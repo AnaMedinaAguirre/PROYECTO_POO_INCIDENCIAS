@@ -29,30 +29,30 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblEmpleado = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtCargoEmpleado = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtApellidoEmpleado = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField6 = new javax.swing.JTextField();
+        cbxGeneroEmpleado = new javax.swing.JComboBox<>();
+        txtTelefonoEmpleado = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbxAreaEmpleado = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        txtSueldoEmpleado = new javax.swing.JTextField();
+        datecFechaEmpleado = new com.toedter.calendar.JDateChooser();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        txtUsuarioEmpleado = new javax.swing.JTextField();
+        txtContraseñaEmpleado = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
+        txtNombreEmpleado = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
@@ -87,15 +87,15 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 980, 280));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/delete.png"))); // NOI18N
-        jButton3.setText("ELIMINAR");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 210, 160, 50));
+        btnEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/delete.png"))); // NOI18N
+        btnEliminar.setText("ELIMINAR");
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 210, 160, 50));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/update.png"))); // NOI18N
-        jButton4.setText("ACTUALIZAR");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 90, 160, 50));
+        btnActualizar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/update.png"))); // NOI18N
+        btnActualizar.setText("ACTUALIZAR");
+        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 90, 160, 50));
 
         jPanel3.setBackground(new java.awt.Color(0, 133, 133));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -103,20 +103,32 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel3.setText("NOMBRES:");
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-        jPanel3.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 210, 40));
+        jPanel3.add(txtCargoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 210, 40));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel6.setText("APELLIDOS:");
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
-        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 210, 40));
+
+        txtApellidoEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtApellidoEmpleadoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtApellidoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 210, 40));
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel5.setText("GÉNERO:");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, 40));
-        jPanel3.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 70, 170, 40));
+        cbxGeneroEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(cbxGeneroEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, 40));
+
+        txtTelefonoEmpleado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTelefonoEmpleadoActionPerformed(evt);
+            }
+        });
+        jPanel3.add(txtTelefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 70, 170, 40));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel7.setText("TELÉFONO:");
@@ -130,14 +142,14 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jLabel9.setText("ÁREA:");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 210, 40));
+        cbxAreaEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(cbxAreaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 210, 40));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel2.setText("SUELDO:");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
-        jPanel3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 70, 150, 40));
-        jPanel3.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, 170, 40));
+        jPanel3.add(txtSueldoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 70, 150, 40));
+        jPanel3.add(datecFechaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, 170, 40));
 
         jLabel10.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel10.setText("REGISTRO:");
@@ -150,13 +162,13 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel12.setText("USUARIO:");
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 210, 40));
-        jPanel3.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 210, 40));
+        jPanel3.add(txtUsuarioEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 210, 40));
+        jPanel3.add(txtContraseñaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 210, 40));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel4.setText("CONTRASEÑA:");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
-        jPanel3.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 210, 40));
+        jPanel3.add(txtNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 210, 40));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 1150, 180));
 
@@ -174,13 +186,21 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtApellidoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidoEmpleadoActionPerformed
+
+    private void txtTelefonoEmpleadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoEmpleadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoEmpleadoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnEliminar;
+    public javax.swing.JComboBox<String> cbxAreaEmpleado;
+    public javax.swing.JComboBox<String> cbxGeneroEmpleado;
+    public com.toedter.calendar.JDateChooser datecFechaEmpleado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -196,14 +216,14 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTable tblEmpleado;
+    public javax.swing.JTable tblEmpleado;
+    public javax.swing.JTextField txtApellidoEmpleado;
+    public javax.swing.JTextField txtCargoEmpleado;
+    public javax.swing.JPasswordField txtContraseñaEmpleado;
+    public javax.swing.JTextField txtNombreEmpleado;
+    public javax.swing.JTextField txtSueldoEmpleado;
+    public javax.swing.JTextField txtTelefonoEmpleado;
+    public javax.swing.JTextField txtUsuarioEmpleado;
     // End of variables declaration//GEN-END:variables
 }

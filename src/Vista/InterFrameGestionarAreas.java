@@ -25,19 +25,19 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblAreas = new javax.swing.JTable();
-        jButton4 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnActualizar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        txtNombreArea = new javax.swing.JTextField();
+        datecFechaArea = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtDescripcionArea = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        txtResponsableArea = new javax.swing.JTextField();
+        txtUbicacionArea = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
 
         setClosable(true);
@@ -72,21 +72,21 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 720, 410));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/update.png"))); // NOI18N
-        jButton4.setText("ACTUALIZAR");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, 160, 50));
+        btnActualizar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/update.png"))); // NOI18N
+        btnActualizar.setText("ACTUALIZAR");
+        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 50, 160, 50));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/delete.png"))); // NOI18N
-        jButton3.setText("ELIMINAR");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 50, 160, 50));
+        btnEliminar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/delete.png"))); // NOI18N
+        btnEliminar.setText("ELIMINAR");
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 50, 160, 50));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setText("NOMBRE:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, -1, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 130, 300, 40));
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 310, 300, 40));
+        jPanel1.add(txtNombreArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 130, 300, 40));
+        jPanel1.add(datecFechaArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 310, 300, 40));
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel5.setText("REGISTRO:");
@@ -100,17 +100,17 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
         jLabel7.setText("DESCRIPCIÓN:");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        txtDescripcionArea.setColumns(20);
+        txtDescripcionArea.setRows(5);
+        jScrollPane2.setViewportView(txtDescripcionArea);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 370, 300, 140));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel8.setText("RESPONSABLE:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, -1, -1));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 190, 300, 40));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 300, 40));
+        jPanel1.add(txtResponsableArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 190, 300, 40));
+        jPanel1.add(txtUbicacionArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 300, 40));
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel9.setText("UBICACIÓN:");
@@ -132,9 +132,9 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    public javax.swing.JButton btnActualizar;
+    public javax.swing.JButton btnEliminar;
+    public com.toedter.calendar.JDateChooser datecFechaArea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -146,10 +146,10 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTable tblAreas;
+    public javax.swing.JTable tblAreas;
+    public javax.swing.JTextArea txtDescripcionArea;
+    public javax.swing.JTextField txtNombreArea;
+    public javax.swing.JTextField txtResponsableArea;
+    public javax.swing.JTextField txtUbicacionArea;
     // End of variables declaration//GEN-END:variables
 }

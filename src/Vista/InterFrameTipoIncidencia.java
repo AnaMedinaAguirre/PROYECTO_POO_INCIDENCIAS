@@ -29,15 +29,15 @@ public class InterFrameTipoIncidencia extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbxCategoria = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        txaDescripcion = new javax.swing.JTextArea();
+        datecFecha = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -54,7 +54,7 @@ public class InterFrameTipoIncidencia extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel3.setText("CATEGORÍA:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 300, 40));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 100, 300, 40));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setText("NOMBRE:");
@@ -64,23 +64,23 @@ public class InterFrameTipoIncidencia extends javax.swing.JInternalFrame {
         jLabel5.setText("FECHA DE REGISTRO:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 300, 40));
+        cbxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "---- SELECCIONA ----" }));
+        jPanel1.add(cbxCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 300, 40));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaDescripcion.setColumns(20);
+        txaDescripcion.setRows(5);
+        jScrollPane1.setViewportView(txaDescripcion);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, 300, 140));
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 300, 40));
+        jPanel1.add(datecFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 300, 40));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setText("DESCRIPCIÓN:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 290, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("GUARDAR");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 120, 50));
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnGuardar.setText("GUARDAR");
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 120, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,9 +98,9 @@ public class InterFrameTipoIncidencia extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    public javax.swing.JButton btnGuardar;
+    public javax.swing.JComboBox<String> cbxCategoria;
+    public com.toedter.calendar.JDateChooser datecFecha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -108,7 +108,7 @@ public class InterFrameTipoIncidencia extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField6;
+    public javax.swing.JTextArea txaDescripcion;
+    public javax.swing.JTextField txtNombre;
     // End of variables declaration//GEN-END:variables
 }

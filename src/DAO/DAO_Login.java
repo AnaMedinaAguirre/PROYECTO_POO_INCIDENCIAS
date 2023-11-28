@@ -4,9 +4,7 @@ import Formatos.*;
 import Modelo.*;
 
 public class DAO_Login extends ConectarDB{
-    public DAO_Login() {
-        super();
-    }
+    public DAO_Login() {}
 
     // Método para verificar las credenciales de inicio de sesión
     public boolean verificarCredenciales(Empleado objeto) {

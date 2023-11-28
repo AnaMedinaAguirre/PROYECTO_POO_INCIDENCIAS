@@ -29,17 +29,17 @@ public class InterFrameRegistroAreas extends javax.swing.JInternalFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txtUbicacion = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        txaDescripcion = new javax.swing.JTextArea();
+        datecFecha = new com.toedter.calendar.JDateChooser();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        txtNombreArea = new javax.swing.JTextField();
+        txtResponsable = new javax.swing.JTextField();
+        btnGuardar = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -56,7 +56,7 @@ public class InterFrameRegistroAreas extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel3.setText("UBICACIÓN:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 300, 40));
+        jPanel1.add(txtUbicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 300, 40));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setText("NOMBRE DEL ÁREA:");
@@ -66,12 +66,12 @@ public class InterFrameRegistroAreas extends javax.swing.JInternalFrame {
         jLabel5.setText("FECHA DE REGISTRO:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaDescripcion.setColumns(20);
+        txaDescripcion.setRows(5);
+        jScrollPane1.setViewportView(txaDescripcion);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 300, 140));
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 300, 40));
+        jPanel1.add(datecFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 300, 40));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setText("DESCRIPCIÓN:");
@@ -80,12 +80,17 @@ public class InterFrameRegistroAreas extends javax.swing.JInternalFrame {
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setText("RESPONSABLE:");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 300, 40));
-        jPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 300, 40));
+        jPanel1.add(txtNombreArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 300, 40));
+        jPanel1.add(txtResponsable, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 300, 40));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton1.setText("GUARDAR");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, 120, 40));
+        btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnGuardar.setText("GUARDAR");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 480, 120, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,10 +106,14 @@ public class InterFrameRegistroAreas extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+
+    }//GEN-LAST:event_btnGuardarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    public javax.swing.JButton btnGuardar;
+    public com.toedter.calendar.JDateChooser datecFecha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -113,9 +122,9 @@ public class InterFrameRegistroAreas extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    public javax.swing.JTextArea txaDescripcion;
+    public javax.swing.JTextField txtNombreArea;
+    public javax.swing.JTextField txtResponsable;
+    public javax.swing.JTextField txtUbicacion;
     // End of variables declaration//GEN-END:variables
 }

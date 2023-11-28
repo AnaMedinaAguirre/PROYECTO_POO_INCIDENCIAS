@@ -9,7 +9,6 @@ import Modelo.Empleado;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import javax.swing.JOptionPane;
 import java.awt.Toolkit;
 
 public class ControladorLogin implements ActionListener, KeyListener {
@@ -24,6 +23,9 @@ public class ControladorLogin implements ActionListener, KeyListener {
         vista.txtUsuario.addKeyListener(this);
         vista.txtContraseña.addKeyListener(this);
         vista.setIconImage(getIconImage());
+        vista.setLocationRelativeTo(null);
+        vista.setTitle("login - GESTOR DE INCIDENCIAS");
+        vista.setVisible(true);
     }
     
     @Override
@@ -49,7 +51,8 @@ public class ControladorLogin implements ActionListener, KeyListener {
     }
     
     public Image getIconImage(){
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("Img/MediCare2.png"));
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource
+        ("Img/MediCare2.png"));
         return retValue;
     }
     
