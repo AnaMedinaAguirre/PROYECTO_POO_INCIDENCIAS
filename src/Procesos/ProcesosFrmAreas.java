@@ -12,10 +12,6 @@ import java.util.GregorianCalendar;
         frm.setTitle("Ingresar nueva Area");
         frm.datecFecha.setCalendar(cal);
     }
-    public static void Estado1(InterFrameGestionarAreas frm){
-        frm.btnActualizar.setEnabled(true);
-        frm.btnEliminar.setEnabled(true);  
-    }
 
     public static void LimpiarEntradas(InterFrameRegistroAreas frm){
         frm.txtNombreArea.setText("");

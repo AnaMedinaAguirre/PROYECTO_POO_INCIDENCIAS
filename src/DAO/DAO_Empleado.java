@@ -47,7 +47,6 @@ public class DAO_Empleado extends ConectarDB {
 
     public ArrayList<String> obtenerAreas() {
         DAO_Area daoArea = new DAO_Area();
-        return daoArea.obtenerNombresAreas(); // Ajusta el método de tu DAO de Área 
-                                              // según lo necesario
+        return daoArea.obtenerNombresAreas();
     }
 }

@@ -65,7 +65,9 @@ public class ControladorLogin implements ActionListener, KeyListener {
             
             if(crud.verificarCredenciales(empleado)){
                 FrmMenu menu = new FrmMenu();
+                ControladorMenu controladorMenu = new ControladorMenu(menu);
                 menu.setVisible(true);
+                
                 vista.dispose();
             }else{
                 Mensajes.M1("Usuario o clave incorrectos. Inténtalo de nuevo.");

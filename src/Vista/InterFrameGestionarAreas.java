@@ -34,11 +34,13 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        txtDescripcionArea = new javax.swing.JTextArea();
+        txaDescripcionArea = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         txtResponsableArea = new javax.swing.JTextField();
         txtUbicacionArea = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        txtIDArea = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
 
         setClosable(true);
         setIconifiable(true);
@@ -83,38 +85,43 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
         jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 50, 160, 50));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
-        jLabel4.setText("NOMBRE:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 140, -1, -1));
-        jPanel1.add(txtNombreArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 130, 300, 40));
-        jPanel1.add(datecFechaArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 310, 300, 40));
+        jLabel4.setText("ID:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 150, -1, -1));
+        jPanel1.add(txtNombreArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 200, 300, 40));
+        jPanel1.add(datecFechaArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 380, 300, 40));
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel5.setText("REGISTRO:");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 330, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 400, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel6.setText("FECHA DE");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 310, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel7.setText("DESCRIPCIÓN:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 380, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 450, -1, -1));
 
-        txtDescripcionArea.setColumns(20);
-        txtDescripcionArea.setRows(5);
-        jScrollPane2.setViewportView(txtDescripcionArea);
+        txaDescripcionArea.setColumns(20);
+        txaDescripcionArea.setRows(5);
+        jScrollPane2.setViewportView(txaDescripcionArea);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 370, 300, 140));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 440, 300, 140));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel8.setText("RESPONSABLE:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, -1, -1));
-        jPanel1.add(txtResponsableArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 190, 300, 40));
-        jPanel1.add(txtUbicacionArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 250, 300, 40));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 270, -1, -1));
+        jPanel1.add(txtResponsableArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 260, 300, 40));
+        jPanel1.add(txtUbicacionArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 320, 300, 40));
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel9.setText("UBICACIÓN:");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 260, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 330, -1, -1));
+        jPanel1.add(txtIDArea, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 142, 300, 40));
+
+        jLabel10.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel10.setText("NOMBRE:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,7 +131,7 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 598, Short.MAX_VALUE)
         );
 
         pack();
@@ -136,6 +143,7 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
     public javax.swing.JButton btnEliminar;
     public com.toedter.calendar.JDateChooser datecFechaArea;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -147,7 +155,8 @@ public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTable tblAreas;
-    public javax.swing.JTextArea txtDescripcionArea;
+    public javax.swing.JTextArea txaDescripcionArea;
+    public javax.swing.JTextField txtIDArea;
     public javax.swing.JTextField txtNombreArea;
     public javax.swing.JTextField txtResponsableArea;
     public javax.swing.JTextField txtUbicacionArea;

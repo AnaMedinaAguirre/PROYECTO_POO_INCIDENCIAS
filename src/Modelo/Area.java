@@ -1,5 +1,6 @@
 package Modelo;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Area {
@@ -37,14 +38,13 @@ public class Area {
 
     public String getIndicador() {return indicador;}
     public void setIndicador(String indicador) {this.indicador = indicador;}
-    
+ 
     //registrar Area
-    public Object[] RegistroArea(int numeracion){
+    public Object[] RegistroArea() {
         Object[] row = {
-            numeracion, idArea, nombreArea, responsable, ubicacion, fechaRegistro,
-            descripcion
+            idArea, nombreArea, responsable, ubicacion, fechaRegistro, descripcion
         };
         return row;
     }
-    
+
 }

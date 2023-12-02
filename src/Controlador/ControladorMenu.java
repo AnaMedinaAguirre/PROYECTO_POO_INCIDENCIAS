@@ -19,7 +19,9 @@ public class ControladorMenu implements ActionListener {
         vista.MenuItemNuevoEmpleado.addActionListener(this);
         vista.MenuItemTiposIncidencias.addActionListener(this);
         vista.MenuItemRegistroAreas.addActionListener(this);
-        fm.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        vista.MenuItemGestionarAreas.addActionListener(this);
+        vista.MenuItemGestionarEmpleados.addActionListener(this);
+        vista.setExtendedState(JFrame.MAXIMIZED_BOTH);
         fm.setDefaultCloseOperation(fm.EXIT_ON_CLOSE);
         fm.setLocationRelativeTo(null);
         fm.setVisible(true);
@@ -40,21 +42,30 @@ public class ControladorMenu implements ActionListener {
             Main.ifne = new InterFrameNuevoEmpleado();
             Main.controlFrmEmpleados = new ControladorFrmEmpleados(Main.ifne);
             vista.Escritorio.add(Main.ifne);
-            CentrarForma.CPanel(vista.Escritorio, Main.ifne);
         }
         
         if (e.getSource() == vista.MenuItemTiposIncidencias) {
             Main.ifti = new InterFrameTipoIncidencia();
             Main.controlFrmTipoIncidencia = new ControladorFrmTipoIncidencia(Main.ifti);
             vista.Escritorio.add(Main.ifti);
-            CentrarForma.CPanel(vista.Escritorio, Main.ifti);
         }
         
         if (e.getSource() == vista.MenuItemRegistroAreas) {
             Main.ifra = new InterFrameRegistroAreas();
             Main.controlFrmArea = new ControladorFrmArea(Main.ifra);
             vista.Escritorio.add(Main.ifra);
-            CentrarForma.CPanel(vista.Escritorio, Main.ifra);
+        }
+        
+        if (e.getSource() == vista.MenuItemGestionarAreas) {
+            Main.ifga = new InterFrameGestionarAreas();
+            Main.controlFrmGestionarArea = new ControladorFrmGestionarArea(Main.ifga);
+            vista.Escritorio.add(Main.ifga);
+        }
+        
+        if (e.getSource() == vista.MenuItemGestionarEmpleados) {
+            Main.ifge = new InterFrameGestionarEmpleados();
+            Main.controlFrmGestionarEmpleados = new ControladorFrmGestionarEmpleados(Main.ifge);
+            vista.Escritorio.add(Main.ifge);
         }
     }
 }

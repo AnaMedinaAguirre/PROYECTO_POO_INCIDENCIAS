@@ -2,6 +2,7 @@ package Principal;
 
 import Vista.*;
 import Controlador.*;
+import javax.swing.JFrame;
 
 public class Main {
     
@@ -10,21 +11,23 @@ public class Main {
     public static InterFrameNuevoEmpleado ifne;
     public static InterFrameTipoIncidencia ifti;
     public static InterFrameRegistroAreas ifra;
+    public static InterFrameGestionarAreas ifga;
+    public static InterFrameGestionarEmpleados ifge;
     
     public static ControladorLogin controlFrmLogin;
     public static ControladorMenu controlFrmMenu;
     public static ControladorFrmEmpleados controlFrmEmpleados;
     public static ControladorFrmTipoIncidencia controlFrmTipoIncidencia;
     public static ControladorFrmArea controlFrmArea;
+    public static ControladorFrmGestionarArea controlFrmGestionarArea;
+    public static ControladorFrmGestionarEmpleados controlFrmGestionarEmpleados;
     
     
     public static void main(String[] args) {
-        frmMenu = new FrmMenu();
-        controlFrmMenu = new ControladorMenu(frmMenu);
-        
         //frmLogin = new FrmLogin();
         //controlFrmLogin = new ControladorLogin(frmLogin);
-        
+        frmMenu = new FrmMenu();
+        controlFrmMenu = new ControladorMenu(frmMenu);
     }
     
 }

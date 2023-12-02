@@ -32,8 +32,10 @@ public class FrmMenu extends javax.swing.JFrame {
         MenuItemCerrar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setExtendedState(1);
         setIconImage(getIconImage());
         setMaximizedBounds(new java.awt.Rectangle(0, 0, 0, 0));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Escritorio.setBackground(new java.awt.Color(0, 84, 84));
 
@@ -45,8 +47,10 @@ public class FrmMenu extends javax.swing.JFrame {
         );
         EscritorioLayout.setVerticalGroup(
             EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 676, Short.MAX_VALUE)
+            .addGap(0, 680, Short.MAX_VALUE)
         );
+
+        getContentPane().add(Escritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 680));
 
         jMenu1.setBackground(new java.awt.Color(204, 204, 255));
         jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Img/employee.png"))); // NOI18N
@@ -214,17 +218,6 @@ public class FrmMenu extends javax.swing.JFrame {
         jMenuBar1.add(jMenu10);
 
         setJMenuBar(jMenuBar1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Escritorio)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Escritorio)
-        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

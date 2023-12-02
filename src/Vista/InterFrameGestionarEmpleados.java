@@ -37,12 +37,10 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jLabel6 = new javax.swing.JLabel();
         txtApellidoEmpleado = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        cbxGeneroEmpleado = new javax.swing.JComboBox<>();
         txtTelefonoEmpleado = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        cbxAreaEmpleado = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         txtSueldoEmpleado = new javax.swing.JTextField();
         datecFechaEmpleado = new com.toedter.calendar.JDateChooser();
@@ -53,6 +51,10 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         txtContraseñaEmpleado = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
         txtNombreEmpleado = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        txtIDEmpleado = new javax.swing.JTextField();
+        cbxAreaEmpleado = new javax.swing.JComboBox<>();
+        cbxGeneroEmpleado = new javax.swing.JComboBox<>();
 
         setClosable(true);
         setIconifiable(true);
@@ -120,9 +122,6 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jLabel5.setText("GÉNERO:");
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, -1));
 
-        cbxGeneroEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(cbxGeneroEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, 40));
-
         txtTelefonoEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTelefonoEmpleadoActionPerformed(evt);
@@ -142,12 +141,9 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jLabel9.setText("ÁREA:");
         jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
 
-        cbxAreaEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(cbxAreaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 210, 40));
-
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
-        jLabel2.setText("SUELDO:");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
+        jLabel2.setText("ID:");
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, -1, -1));
         jPanel3.add(txtSueldoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 70, 150, 40));
         jPanel3.add(datecFechaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, 170, 40));
 
@@ -169,6 +165,17 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
         jLabel4.setText("CONTRASEÑA:");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
         jPanel3.add(txtNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 210, 40));
+
+        jLabel13.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
+        jLabel13.setText("SUELDO:");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
+        jPanel3.add(txtIDEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 150, 40));
+
+        cbxAreaEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(cbxAreaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 210, 40));
+
+        cbxGeneroEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel3.add(cbxGeneroEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, 40));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 1150, 180));
 
@@ -205,6 +212,7 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -221,6 +229,7 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txtApellidoEmpleado;
     public javax.swing.JTextField txtCargoEmpleado;
     public javax.swing.JPasswordField txtContraseñaEmpleado;
+    public javax.swing.JTextField txtIDEmpleado;
     public javax.swing.JTextField txtNombreEmpleado;
     public javax.swing.JTextField txtSueldoEmpleado;
     public javax.swing.JTextField txtTelefonoEmpleado;
