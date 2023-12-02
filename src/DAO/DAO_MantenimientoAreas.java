@@ -1,6 +1,5 @@
 package DAO;
 
-import Formatos.ManejadorTablas;
 import Formatos.Mensajes;
 import Modelo.Area;
 import javax.swing.JTable;
@@ -27,13 +26,11 @@ public class DAO_MantenimientoAreas extends ConectarDB {
         DefaultTableModel modelo = new DefaultTableModel(null, titulos);
         tabla.setModel(modelo);
         Area a = new Area();
-        int cantreg = 0;
 
         try {
             rs = st.executeQuery("SELECT idArea, nombreArea, responsable, ubicacion, fechaRegistro, "
                     + "descripcion, indicador FROM tb_area WHERE indicador='S';");
             while (rs.next()) {
-                cantreg++;
                 a.setIdArea(rs.getInt("idArea"));
                 a.setNombreArea(rs.getString("nombreArea"));
                 a.setResponsable(rs.getString("responsable"));
@@ -106,7 +103,7 @@ public class DAO_MantenimientoAreas extends ConectarDB {
             ps.setInt(1, idArea);
             rs = ps.executeQuery();
             if (rs.next()) {
-                vista.txtIDArea.setText(String.valueOf(rs.getInt("idArea"))); // Set the ID in the corresponding txt field
+                vista.txtIDArea.setText(String.valueOf(rs.getInt("idArea")));
                 vista.txtNombreArea.setText(rs.getString("nombreArea"));
                 vista.txtResponsableArea.setText(rs.getString("responsable"));
                 vista.txtUbicacionArea.setText(rs.getString("ubicacion"));

@@ -13,6 +13,7 @@ public class Main {
     public static InterFrameRegistroAreas ifra;
     public static InterFrameGestionarAreas ifga;
     public static InterFrameGestionarEmpleados ifge;
+    public static InterFrameGestionarTipoIncidencia ifgti;
     
     public static ControladorLogin controlFrmLogin;
     public static ControladorMenu controlFrmMenu;
@@ -21,6 +22,7 @@ public class Main {
     public static ControladorFrmArea controlFrmArea;
     public static ControladorFrmGestionarArea controlFrmGestionarArea;
     public static ControladorFrmGestionarEmpleados controlFrmGestionarEmpleados;
+    public static ControladorFrmGestionarTipoIncidencia controlFrmGestionarTipoIncidencia;
     
     
     public static void main(String[] args) {

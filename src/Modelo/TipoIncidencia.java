@@ -36,9 +36,9 @@ public class TipoIncidencia {
     public void setIndicador(String indicador) {this.indicador = indicador;}
     
     //registrar Tipod de incidencia
-    public Object[] RegistrarTipoIncidencia(int numeracion){
+    public Object[] RegistrarTipoIncidencia(){
         Object[] row = {
-            numeracion, idTipoInci, nombreTipoInci, categoria, fechaRegistro, descripcion
+            idTipoInci, nombreTipoInci, categoria, fechaRegistro, descripcion
         };
         return row;
     }
