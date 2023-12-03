@@ -16,6 +16,7 @@ public class Empleado {
     private String usuario;
     private String contraseña;
     private String indicador;
+    private String nombreArea;
     
     //constructor
     public Empleado(){}
@@ -57,11 +58,15 @@ public class Empleado {
 
     public String getIndicador() {return indicador;}
     public void setIndicador(String indicador) {this.indicador = indicador;}
+
+    public String getNombreArea() {return nombreArea;}
+    public void setNombreArea(String nombreArea) {this.nombreArea = nombreArea;}
+    
     
     //registrar Empleado
-    public Object[] RegistarEmpleado(int numeracion){
+    public Object[] RegistarEmpleado(){
         Object[] row = {
-            numeracion,idEmpleado, nombreEmpleado, apellidoEmpleado, genero, telefono,
+            idEmpleado, nombreEmpleado, apellidoEmpleado, genero, telefono,
             cargo, area, fechaRegistro, sueldo, usuario, contraseña
             };
         return row;

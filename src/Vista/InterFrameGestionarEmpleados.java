@@ -104,78 +104,78 @@ public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
 
         jLabel3.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel3.setText("NOMBRES:");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-        jPanel3.add(txtCargoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 210, 40));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, -1, -1));
+        jPanel3.add(txtCargoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 210, 40));
 
         jLabel6.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel6.setText("APELLIDOS:");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, -1, -1));
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 20, -1, -1));
 
         txtApellidoEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtApellidoEmpleadoActionPerformed(evt);
             }
         });
-        jPanel3.add(txtApellidoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 10, 210, 40));
+        jPanel3.add(txtApellidoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, 210, 40));
 
         jLabel5.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel5.setText("GÉNERO:");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 20, -1, -1));
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, -1));
 
         txtTelefonoEmpleado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtTelefonoEmpleadoActionPerformed(evt);
             }
         });
-        jPanel3.add(txtTelefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 70, 170, 40));
+        jPanel3.add(txtTelefonoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 170, 40));
 
         jLabel7.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel7.setText("TELÉFONO:");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 80, -1, -1));
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel8.setText("CARGO:");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 80, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel9.setText("ÁREA:");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel2.setText("ID:");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, -1, -1));
-        jPanel3.add(txtSueldoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 70, 150, 40));
-        jPanel3.add(datecFechaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, 170, 40));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel3.add(txtSueldoEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 70, 150, 40));
+        jPanel3.add(datecFechaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 170, 40));
 
         jLabel10.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel10.setText("REGISTRO:");
-        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 30, -1, -1));
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel11.setText("FECHA DE");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, -1, -1));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel12.setText("USUARIO:");
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
-        jPanel3.add(txtUsuarioEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 130, 210, 40));
-        jPanel3.add(txtContraseñaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 130, 210, 40));
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
+        jPanel3.add(txtUsuarioEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, 210, 40));
+        jPanel3.add(txtContraseñaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 130, 210, 40));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel4.setText("CONTRASEÑA:");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, -1, -1));
-        jPanel3.add(txtNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 210, 40));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, -1, -1));
+        jPanel3.add(txtNombreEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, 210, 40));
 
         jLabel13.setFont(new java.awt.Font("Verdana", 1, 12)); // NOI18N
         jLabel13.setText("SUELDO:");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
-        jPanel3.add(txtIDEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 130, 150, 40));
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 80, -1, -1));
+        jPanel3.add(txtIDEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 170, 40));
 
         cbxAreaEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(cbxAreaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 210, 40));
+        jPanel3.add(cbxAreaEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 70, 210, 40));
 
         cbxGeneroEmpleado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel3.add(cbxGeneroEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 150, 40));
+        jPanel3.add(cbxGeneroEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 150, 40));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 1150, 180));
 

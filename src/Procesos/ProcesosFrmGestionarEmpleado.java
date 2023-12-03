@@ -11,7 +11,7 @@ public class ProcesosFrmGestionarEmpleado {
     DAO_Area crud = new DAO_Area();
     public static void Presentacion(InterFrameGestionarEmpleados frge){
         frge.setVisible(true);
-        frge.setTitle("Gestionar Áreas");
+        frge.setTitle("Gestionar Empleados");
         frge.datecFechaEmpleado.setCalendar(cal);
         frge.txtIDEmpleado.setEnabled(false);
     }
@@ -34,16 +34,16 @@ public class ProcesosFrmGestionarEmpleado {
         frge.txtContraseñaEmpleado.setText(""); 
     }
     
-    public Empleado LeerDatos(InterFrameGestionarEmpleados frge){
+    public static Empleado LeerDatos(InterFrameGestionarEmpleados frge, DAO_Area crud){
         Empleado emp = new Empleado();
         emp.setNombreEmpleado(frge.txtNombreEmpleado.getText());
         emp.setApellidoEmpleado(frge.txtApellidoEmpleado.getText());
         emp.setGenero(frge.cbxGeneroEmpleado.getSelectedItem().toString());
         emp.setTelefono(frge.txtTelefonoEmpleado.getText());
         emp.setCargo(frge.txtCargoEmpleado.getText());
-        String nombreAreaSeleccionada = frge.cbxAreaEmpleado.getSelectedItem().toString();
-        int idArea = crud.obtenerIdAreaPorNombre(nombreAreaSeleccionada);
-        emp.setArea(idArea);
+        String areaSeleccionada = frge.cbxAreaEmpleado.getSelectedItem().toString();
+        int areaId = crud.obtenerIdAreaPorNombre(areaSeleccionada);
+        emp.setArea(areaId);
         emp.setFechaRegistro(frge.datecFechaEmpleado.getDate());
         emp.setSueldo(Double.parseDouble(frge.txtSueldoEmpleado.getText()));
         emp.setUsuario(frge.txtUsuarioEmpleado.getText());

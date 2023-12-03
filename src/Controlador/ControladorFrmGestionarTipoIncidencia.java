@@ -25,7 +25,7 @@ public class ControladorFrmGestionarTipoIncidencia implements ActionListener{
         vista.btnEliminar.addActionListener(this);
         ProcesosFrmGestionarTipoIncidencia.Presentacion(ifgti);
         crud = new DAO_MantenimientoTipoIncidencia(vista);
-        crud.cargarCategorias(); //agregado
+        crud.cargarCategorias();
         crud.configurarMouseListener();
         crud.EnviarDatosTipoInciSeleccionada(0);
         ActualizarForma();
@@ -40,57 +40,60 @@ public class ControladorFrmGestionarTipoIncidencia implements ActionListener{
     }
     
     private void addTextChangedListeners() {
-    vista.txtNombre.getDocument().addDocumentListener(new DocumentListener() {
-        @Override
-        public void insertUpdate(DocumentEvent e) {
-            enableUpdateButton();
-        }
-        @Override
-        public void removeUpdate(DocumentEvent e) {
-            enableUpdateButton();
-        }
-        @Override
-        public void changedUpdate(DocumentEvent e) {
-            enableUpdateButton();
-        }
-    });
-    
-    
-    vista.cbxCategoria.addActionListener(new ActionListener() {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            enableUpdateButton();
-        }
-    });
-    
-
-    vista.txaDescripcion.getDocument().addDocumentListener(new DocumentListener() {
-        @Override
-        public void insertUpdate(DocumentEvent e) {
-            enableUpdateButton();
-        }
-        @Override
-        public void removeUpdate(DocumentEvent e) {
-            enableUpdateButton();
-        }
-        @Override
-        public void changedUpdate(DocumentEvent e) {
-            enableUpdateButton();
-        }
-    });
-    
-    vista.datecFecha.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() {
-        @Override
-        public void propertyChange(PropertyChangeEvent evt) {
-            if ("date".equals(evt.getPropertyName())) {
+        vista.txtNombre.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
                 enableUpdateButton();
             }
-        }
-    });
-}
-private void enableUpdateButton() {
-    vista.btnActualizar.setEnabled(true);
-}
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                enableUpdateButton();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                enableUpdateButton();
+            }
+        });
+
+        vista.cbxCategoria.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                enableUpdateButton();
+            }
+        });
+
+        vista.txaDescripcion.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                enableUpdateButton();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                enableUpdateButton();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                enableUpdateButton();
+            }
+        });
+
+        vista.datecFecha.getDateEditor().addPropertyChangeListener(new PropertyChangeListener() {
+            @Override
+            public void propertyChange(PropertyChangeEvent evt) {
+                if ("date".equals(evt.getPropertyName())) {
+                    enableUpdateButton();
+                }
+            }
+        });
+    }
+
+    private void enableUpdateButton() {
+        vista.btnActualizar.setEnabled(true);
+    }
     
     @Override
     public void actionPerformed(ActionEvent e) {
