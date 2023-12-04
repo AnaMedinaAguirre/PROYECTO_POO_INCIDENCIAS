@@ -19,6 +19,7 @@ public class ControladorMenu implements ActionListener {
         vista.MenuItemNuevoEmpleado.addActionListener(this);
         vista.MenuItemTiposIncidencias.addActionListener(this);
         vista.MenuItemRegistroAreas.addActionListener(this);
+        vista.MenuItemNuevaIncidencia.addActionListener(this);
         vista.MenuItemGestionarAreas.addActionListener(this);
         vista.MenuItemGestionarEmpleados.addActionListener(this);
         vista.MenuItemGestionarTipos.addActionListener(this);
@@ -55,6 +56,12 @@ public class ControladorMenu implements ActionListener {
             Main.ifra = new InterFrameRegistroAreas();
             Main.controlFrmArea = new ControladorFrmArea(Main.ifra);
             vista.Escritorio.add(Main.ifra);
+        }
+        
+        if (e.getSource() == vista.MenuItemNuevaIncidencia) {
+            Main.ifni = new InterFrameNuevaIncidencia();
+            Main.controlFrmIncidencias = new ControladorFrmIncidencias(Main.ifni);
+            vista.Escritorio.add(Main.ifni);
         }
         
         if (e.getSource() == vista.MenuItemGestionarAreas) {

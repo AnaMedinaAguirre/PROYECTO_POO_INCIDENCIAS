@@ -49,4 +49,45 @@ public class DAO_Empleado extends ConectarDB {
         DAO_Area daoArea = new DAO_Area();
         return daoArea.obtenerNombresAreas();
     }
+    
+        public ArrayList<String> obtenerNombresEmpleados() {
+        ArrayList<String> nombreEmpleados = new ArrayList<>();
+
+        try {
+            String query = "SELECT nombreEmpleado FROM tb_empleado;";
+            st = conexion.createStatement();
+            rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                nombreEmpleados.add(rs.getString("nombreEmpleado"));
+            }
+
+        } catch (Exception e) {
+            Mensajes.M1("Error al obtener los nombres de los empleados: " + e.getMessage());
+        }
+
+        return nombreEmpleados;
+    }
+
+    public int obtenerIdEmpleadoPorNombre(String nombreEmpleado) {
+
+        int idEmpleado = 0; // Valor predeterminado si no se encuentra el empleado
+
+        try {
+            String query = "SELECT idEmpleado FROM tb_empleado WHERE nombreEmpleado = ?;";
+            ps = conexion.prepareStatement(query);
+            ps.setString(1, nombreEmpleado);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                idEmpleado = rs.getInt("idEmpleado");
+            }
+
+            //conexion.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR al obtener ID del empleado." + e);
+        }
+        
+        return idEmpleado;
+    }
 }

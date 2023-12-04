@@ -17,12 +17,6 @@ public class ProcesosFrmEmpleado {
         ifne.datecFecha.setCalendar(cal);
     }
     
-    
-    public static void Estado1(InterFrameGestionarEmpleados frm){
-        frm.btnActualizar.setEnabled(true);
-        frm.btnEliminar.setEnabled(true);  
-    }
-    
     public static void LimpiarEntradas(InterFrameNuevoEmpleado ifne){
         ifne.txtNombres.setText("");
         ifne.txtApellidos.setText("");
