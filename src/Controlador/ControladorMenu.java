@@ -23,6 +23,7 @@ public class ControladorMenu implements ActionListener {
         vista.MenuItemGestionarAreas.addActionListener(this);
         vista.MenuItemGestionarEmpleados.addActionListener(this);
         vista.MenuItemGestionarTipos.addActionListener(this);
+        vista.MenuItemGestionarIncidencias.addActionListener(this);
         vista.setExtendedState(JFrame.MAXIMIZED_BOTH);
         fm.setDefaultCloseOperation(fm.EXIT_ON_CLOSE);
         fm.setLocationRelativeTo(null);
@@ -80,6 +81,12 @@ public class ControladorMenu implements ActionListener {
             Main.ifgti = new InterFrameGestionarTipoIncidencia();
             Main.controlFrmGestionarTipoIncidencia = new ControladorFrmGestionarTipoIncidencia(Main.ifgti);
             vista.Escritorio.add(Main.ifgti);
+        }
+        
+        if (e.getSource() == vista.MenuItemGestionarIncidencias) {
+            Main.ifgi = new InterFrameGestionarIncidencias();
+            Main.controlFrmGestionarIncidencias = new ControladorFrmGestionarIncidencias(Main.ifgi);
+            vista.Escritorio.add(Main.ifgi);
         }
     }
 }

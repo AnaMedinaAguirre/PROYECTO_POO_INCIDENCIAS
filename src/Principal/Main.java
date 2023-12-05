@@ -15,6 +15,7 @@ public class Main {
     public static InterFrameGestionarAreas ifga;
     public static InterFrameGestionarEmpleados ifge;
     public static InterFrameGestionarTipoIncidencia ifgti;
+    public static InterFrameGestionarIncidencias ifgi;
     
     public static ControladorLogin controlFrmLogin;
     public static ControladorMenu controlFrmMenu;
@@ -25,6 +26,7 @@ public class Main {
     public static ControladorFrmGestionarArea controlFrmGestionarArea;
     public static ControladorFrmGestionarEmpleados controlFrmGestionarEmpleados;
     public static ControladorFrmGestionarTipoIncidencia controlFrmGestionarTipoIncidencia;
+    public static ControladorFrmGestionarIncidencias controlFrmGestionarIncidencias;
     
     
     public static void main(String[] args) {

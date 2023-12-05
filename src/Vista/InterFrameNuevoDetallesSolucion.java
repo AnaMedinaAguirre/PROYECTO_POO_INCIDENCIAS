@@ -8,12 +8,12 @@ package Vista;
  *
  * @author ANITA
  */
-public class InterFrameDetallesSolucion extends javax.swing.JInternalFrame {
+public class InterFrameNuevoDetallesSolucion extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form InterFrameDetallesSolucion
      */
-    public InterFrameDetallesSolucion() {
+    public InterFrameNuevoDetallesSolucion() {
         initComponents();
     }
 
