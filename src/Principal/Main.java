@@ -30,7 +30,7 @@ public class Main {
     public static ControladorFrmGestionarEmpleados controlFrmGestionarEmpleados;
     public static ControladorFrmGestionarTipoIncidencia controlFrmGestionarTipoIncidencia;
     public static ControladorFrmGestionarIncidencias controlFrmGestionarIncidencias;
-    //public static ControladorFrmGestionarDetalleSolucion controlFrmGestionarDetalleSolucion;
+    public static ControladorFrmGestionarDetalleSolucion controlFrmGestionarDetalleSolucion;
     
     
     public static void main(String[] args) {

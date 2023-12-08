@@ -96,5 +96,11 @@ public class ControladorMenu implements ActionListener {
             Main.controlFrmGestionarIncidencias = new ControladorFrmGestionarIncidencias(Main.ifgi);
             vista.Escritorio.add(Main.ifgi);
         }
+        
+        if (e.getSource() == vista.MenuItemGestionarDetalleSolucion) {
+            Main.ifgds = new InterFrameGestionarDetalleSolucion();
+            Main.controlFrmGestionarDetalleSolucion = new ControladorFrmGestionarDetalleSolucion(Main.ifgds);
+            vista.Escritorio.add(Main.ifgds);
+        }
     }
 }

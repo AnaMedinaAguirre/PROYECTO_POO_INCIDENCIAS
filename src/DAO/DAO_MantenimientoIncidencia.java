@@ -192,7 +192,7 @@ public class DAO_MantenimientoIncidencia extends ConectarDB {
         vista.cbxPrioridad.setModel(modelo);
     }
 
-    //Método para cargar las áreas en el combobox
+    //Método para cargar los empleados en el combobox
     public void CargarComboEmpleado1() {
         String query = "SELECT idEmpleado, nombreEmpleado FROM tb_empleado;";
         try {
@@ -221,7 +221,7 @@ public class DAO_MantenimientoIncidencia extends ConectarDB {
         }
     }
 
-    //Método para cargar las áreas en el combobox
+    //Método para cargar los empleados en el combobox
     public void CargarComboEmpleado2() {
         String query = "SELECT idEmpleado, nombreEmpleado FROM tb_empleado;";
         try {
@@ -250,7 +250,7 @@ public class DAO_MantenimientoIncidencia extends ConectarDB {
         }
     }
 
-    //Método para cargar las áreas en el combobox
+    //Método para cargar las incidencias en el combobox
     public void CargarComboTipoIncidencia() {
         String query = "SELECT * FROM tb_tipoincidencia;";
         try {
