@@ -62,4 +62,53 @@ public class DAO_Incidencia extends ConectarDB{
         DAO_Area daoArea = new DAO_Area();
         return daoArea.obtenerNombresAreas();
     }
+    
+    
+    public ArrayList<String> obtenerNombresIncidencia(){
+        ArrayList<String> nombreIncidencia = new ArrayList<>();
+        
+        try {
+            String query = "SELECT nombreIncidencia FROM tb_incidencia;"; // Query para obtener los 
+                                                                          // nombres de las
+                                                                          //incidencias
+            st = conexion.createStatement();
+            rs = st.executeQuery(query);
+            
+            while (rs.next()) {                
+                nombreIncidencia.add(rs.getString("nombreIncidencia")); // Agregar el nombre de la
+                                                                        // incidencia a la lista
+            }
+            
+            // Cerrar la conexión
+            conexion.close();
+            
+        } catch (Exception e) {
+            // Manejar cualquier excepción que pueda ocurrir al obtener los nombres de incidencia
+            Mensajes.M1("Error al obtener nombres de las incidencias: " + e.getMessage());
+        }
+        
+        return nombreIncidencia;
+    }
+    
+    public int obtenerIdIncidenciaPorNombre(String nombreIncidencia){
+        
+        int idIncidencia = 0; // Valor predeterminado si no se encuentra la incidencia
+        
+        try {
+            String query = "SELECT idIncidencia FROM tb_incidencia WHERE nombreIncidencia = ?;";
+            ps = conexion.prepareStatement(query);
+            ps.setString(1, nombreIncidencia);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                idIncidencia = rs.getInt("idIncidencia");
+            }
+
+            conexion.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR al obtener ID de la incidencia." + e);
+        }
+        
+        return idIncidencia;
+    }
 }

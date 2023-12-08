@@ -12,10 +12,12 @@ public class Main {
     public static InterFrameTipoIncidencia ifti;
     public static InterFrameRegistroAreas ifra;
     public static InterFrameNuevaIncidencia ifni;
+    public static InterFrameNuevoDetallesSolucion ifnds;
     public static InterFrameGestionarAreas ifga;
     public static InterFrameGestionarEmpleados ifge;
     public static InterFrameGestionarTipoIncidencia ifgti;
     public static InterFrameGestionarIncidencias ifgi;
+    public static InterFrameGestionarDetalleSolucion ifgds;
     
     public static ControladorLogin controlFrmLogin;
     public static ControladorMenu controlFrmMenu;
@@ -23,17 +25,19 @@ public class Main {
     public static ControladorFrmTipoIncidencia controlFrmTipoIncidencia;
     public static ControladorFrmArea controlFrmArea;
     public static ControladorFrmIncidencias controlFrmIncidencias;
+    public static ControladorFrmDetalleSolucion controlFrmDetalleSolucion;
     public static ControladorFrmGestionarArea controlFrmGestionarArea;
     public static ControladorFrmGestionarEmpleados controlFrmGestionarEmpleados;
     public static ControladorFrmGestionarTipoIncidencia controlFrmGestionarTipoIncidencia;
     public static ControladorFrmGestionarIncidencias controlFrmGestionarIncidencias;
+    //public static ControladorFrmGestionarDetalleSolucion controlFrmGestionarDetalleSolucion;
     
     
     public static void main(String[] args) {
-        //frmLogin = new FrmLogin();
-        //controlFrmLogin = new ControladorLogin(frmLogin);
-        frmMenu = new FrmMenu();
-        controlFrmMenu = new ControladorMenu(frmMenu);
+        frmLogin = new FrmLogin();
+        controlFrmLogin = new ControladorLogin(frmLogin);
+        //frmMenu = new FrmMenu();
+        //controlFrmMenu = new ControladorMenu(frmMenu);
     }
     
 }
