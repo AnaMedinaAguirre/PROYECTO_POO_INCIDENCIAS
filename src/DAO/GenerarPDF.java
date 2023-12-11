@@ -8,7 +8,7 @@ import com.itextpdf.text.FontFactory;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
-import java.awt.Font;
+import java.awt.Font; 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -74,7 +74,7 @@ public class GenerarPDF extends ConectarDB {
                 }
 
             } catch (SQLException e) {
-                System.out.println("ERROR 4 en: " + e);
+                System.out.println("ERROR en: " + e);
             } catch (DocumentException ex) {
                 java.util.logging.Logger.getLogger(GenerarPDF.class.getName()).log(Level.SEVERE, null, ex);
             }
