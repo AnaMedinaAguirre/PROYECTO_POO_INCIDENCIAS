@@ -1,17 +1,9 @@
 package Vista;
 
-import javax.swing.table.DefaultTableModel;
-
 public class InterFrameGestionarIncidencias extends javax.swing.JInternalFrame {
-    
-    String titulo[]= {"ID","Nombre","Asignado por","Asignado a","Prioridad", 
-                      "Tipo", "Área", "Fecha de registro", "Estado", "Descripción"};
-    DefaultTableModel modelo;
     
     public InterFrameGestionarIncidencias() {
         initComponents();
-        modelo = new DefaultTableModel(null, titulo);
-        this.tblIndicencias.setModel(modelo);
     }
     
     

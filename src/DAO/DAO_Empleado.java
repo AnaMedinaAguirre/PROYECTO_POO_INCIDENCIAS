@@ -8,8 +8,9 @@ import java.util.ArrayList;
 
 public class DAO_Empleado extends ConectarDB {
 
-    public DAO_Empleado() {}
-    
+    public DAO_Empleado() {
+    }
+
     InterFrameNuevoEmpleado vista;
 
     //método para registrar empleados
@@ -49,8 +50,8 @@ public class DAO_Empleado extends ConectarDB {
         DAO_Area daoArea = new DAO_Area();
         return daoArea.obtenerNombresAreas();
     }
-    
-        public ArrayList<String> obtenerNombresEmpleados() {
+
+    public ArrayList<String> obtenerNombresEmpleados() {
         ArrayList<String> nombreEmpleados = new ArrayList<>();
 
         try {
@@ -87,7 +88,30 @@ public class DAO_Empleado extends ConectarDB {
         } catch (Exception e) {
             Mensajes.M1("ERROR al obtener ID del empleado." + e);
         }
-        
+
         return idEmpleado;
     }
+    
+    //agregado
+    public String obtenerNombreEmpleadoPorId(int idEmpleado) {
+    String nombreEmpleado = null; // Valor predeterminado si no se encuentra el nombre del empleado
+
+    try {
+        String query = "SELECT nombreEmpleado FROM tb_empleado WHERE idEmpleado = ?;";
+        ps = conexion.prepareStatement(query);
+        ps.setInt(1, idEmpleado);
+        rs = ps.executeQuery();
+
+        if (rs.next()) {
+            nombreEmpleado = rs.getString("nombreEmpleado");
+        }
+
+        //conexion.close();
+    } catch (Exception e) {
+        Mensajes.M1("ERROR al obtener nombre del empleado." + e);
+    }
+
+    return nombreEmpleado;
+}
+
 }

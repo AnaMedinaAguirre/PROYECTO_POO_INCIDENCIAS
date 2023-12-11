@@ -85,4 +85,25 @@ public class DAO_TipoIncidencia extends ConectarDB{
         
         return idTipoInci;
     }
+    
+    //agregado
+    public String obtenerNombreTipoIncidenciaPorId(int idTipoIncidencia) {
+    String nombreTipoIncidencia = null;
+
+    try {
+        String query = "SELECT nombreTipoInci FROM tb_tipoincidencia WHERE idTipoInci = ?;";
+        ps = conexion.prepareStatement(query);
+        ps.setInt(1, idTipoIncidencia);
+        rs = ps.executeQuery();
+
+        if (rs.next()) {
+            nombreTipoIncidencia = rs.getString("nombreTipoInci");
+        }
+    } catch (Exception e) {
+        Mensajes.M1("ERROR al obtener nombre del tipo de incidencia." + e);
+    }
+
+    return nombreTipoIncidencia;
+}
+
 }

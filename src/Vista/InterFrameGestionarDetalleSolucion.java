@@ -46,6 +46,10 @@ public class InterFrameGestionarDetalleSolucion extends javax.swing.JInternalFra
         jLabel7 = new javax.swing.JLabel();
         cbxIncidencia = new javax.swing.JComboBox<>();
 
+        setClosable(true);
+        setIconifiable(true);
+        setResizable(true);
+
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

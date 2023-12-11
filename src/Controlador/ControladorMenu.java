@@ -26,6 +26,7 @@ public class ControladorMenu implements ActionListener {
         vista.MenuItemGestionarTipos.addActionListener(this);
         vista.MenuItemGestionarIncidencias.addActionListener(this);
         vista.MenuItemGestionarDetalleSolucion.addActionListener(this);
+        vista.MenuItemSeguimiento.addActionListener(this);
         vista.setExtendedState(JFrame.MAXIMIZED_BOTH);
         fm.setDefaultCloseOperation(fm.EXIT_ON_CLOSE);
         fm.setLocationRelativeTo(null);
@@ -101,6 +102,12 @@ public class ControladorMenu implements ActionListener {
             Main.ifgds = new InterFrameGestionarDetalleSolucion();
             Main.controlFrmGestionarDetalleSolucion = new ControladorFrmGestionarDetalleSolucion(Main.ifgds);
             vista.Escritorio.add(Main.ifgds);
+        }
+        
+        if (e.getSource() == vista.MenuItemSeguimiento) {
+            Main.ifsi = new InterFrameSeguimientoIncidencia();
+            Main.controlFrmSeguimientoIncidencia = new ControladorFrmSeguimientoIncidencia(Main.ifsi);
+            vista.Escritorio.add(Main.ifsi);
         }
     }
 }

@@ -1,19 +1,9 @@
 package Vista;
 
-import javax.swing.table.DefaultTableModel;
-
 public class InterFrameGestionarAreas extends javax.swing.JInternalFrame {
-    
-    String titulo[]= {"ID Área","Nombre","Responsable","Ubicación","Fecha de registro", 
-                      "Descripción"};
-    DefaultTableModel modelo;
     
     public InterFrameGestionarAreas() {
         initComponents();
-        
-        modelo = new DefaultTableModel(null, titulo);
-        this.tblAreas.setModel(modelo);
-        
     }
     
     @SuppressWarnings("unchecked")

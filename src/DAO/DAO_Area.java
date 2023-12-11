@@ -86,4 +86,25 @@ public class DAO_Area extends ConectarDB{
 
         return idArea;
     }
+    
+    //agregado
+    public String obtenerNombreAreaPorId(int idArea) {
+    String nombreArea = null;
+
+    try {
+        String query = "SELECT nombreArea FROM tb_area WHERE idArea = ?;";
+        ps = conexion.prepareStatement(query);
+        ps.setInt(1, idArea);
+        rs = ps.executeQuery();
+
+        if (rs.next()) {
+            nombreArea = rs.getString("nombreArea");
+        }
+    } catch (Exception e) {
+        Mensajes.M1("ERROR al obtener nombre del área." + e);
+    }
+
+    return nombreArea;
+}
+
 }

@@ -16,6 +16,10 @@ public class DetalleSolucion {
     
     //constructor
     public DetalleSolucion(){}
+
+    public DetalleSolucion(int aInt, int aInt0, String string, String string0, java.sql.Date date, String string1) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
     //getter and setter
     public int getIdDetSolucion() {return idDetSolucion;}

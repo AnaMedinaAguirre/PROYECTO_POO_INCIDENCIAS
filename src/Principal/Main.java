@@ -18,6 +18,7 @@ public class Main {
     public static InterFrameGestionarTipoIncidencia ifgti;
     public static InterFrameGestionarIncidencias ifgi;
     public static InterFrameGestionarDetalleSolucion ifgds;
+    public static InterFrameSeguimientoIncidencia ifsi;
     
     public static ControladorLogin controlFrmLogin;
     public static ControladorMenu controlFrmMenu;
@@ -31,6 +32,7 @@ public class Main {
     public static ControladorFrmGestionarTipoIncidencia controlFrmGestionarTipoIncidencia;
     public static ControladorFrmGestionarIncidencias controlFrmGestionarIncidencias;
     public static ControladorFrmGestionarDetalleSolucion controlFrmGestionarDetalleSolucion;
+    public static ControladorFrmSeguimientoIncidencia controlFrmSeguimientoIncidencia;
     
     
     public static void main(String[] args) {

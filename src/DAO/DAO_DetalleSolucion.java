@@ -43,4 +43,42 @@ public class DAO_DetalleSolucion extends ConectarDB{
         DAO_Incidencia daoIncidencia = new DAO_Incidencia();
         return daoIncidencia.obtenerNombresIncidencia();
     }
+    
+    public ArrayList<String> obtenerEstado() {
+        ArrayList<String> estado = new ArrayList<>();
+
+        try {
+            String query = "SELECT estado FROM tb_detsolucion;";
+            st = conexion.createStatement();
+            rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                estado.add(rs.getString("estado"));
+            }
+
+        } catch (Exception e) {
+            Mensajes.M1("Error al obtener los estados: " + e.getMessage());
+        }
+
+        return estado;
+    }
+    
+    public ArrayList<String> obtenerFechaModificacion() {
+        ArrayList<String> fechaModificacion = new ArrayList<>();
+
+        try {
+            String query = "SELECT fechaModificacion FROM tb_detsolucion;";
+            st = conexion.createStatement();
+            rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                fechaModificacion.add(rs.getString("fechaModificacion"));
+            }
+
+        } catch (Exception e) {
+            Mensajes.M1("Error al obtener las fechas de modificacion: " + e.getMessage());
+        }
+
+        return fechaModificacion;
+    }
 }

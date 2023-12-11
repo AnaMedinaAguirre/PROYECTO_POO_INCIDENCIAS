@@ -1,18 +1,9 @@
 package Vista;
 
-import javax.swing.table.DefaultTableModel;
-
 public class InterFrameGestionarEmpleados extends javax.swing.JInternalFrame {
     
-    String titulo[]= {"ID Empleado","Nombres","Apellidos","Género","Teléfono", 
-                      "Cargo", "Área", "Sueldo", "Fecha de registro", "Usuario", 
-                      "Contraseña"};
-    DefaultTableModel modelo;
-
     public InterFrameGestionarEmpleados() {
         initComponents();
-        modelo = new DefaultTableModel(null, titulo);
-        this.tblEmpleado.setModel(modelo);
     }
 
     /**
