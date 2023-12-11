@@ -4,7 +4,7 @@ import Vista.*;
 import Controlador.*;
 
 public class Main {
-    
+
     public static FrmLogin frmLogin;
     public static FrmMenu frmMenu;
     public static InterFrameNuevoEmpleado ifne;
@@ -18,7 +18,7 @@ public class Main {
     public static InterFrameGestionarIncidencias ifgi;
     public static InterFrameGestionarDetalleSolucion ifgds;
     public static InterFrameSeguimientoIncidencia ifsi;
-    
+
     public static ControladorLogin controlFrmLogin;
     public static ControladorMenu controlFrmMenu;
     public static ControladorFrmEmpleados controlFrmEmpleados;
@@ -32,11 +32,10 @@ public class Main {
     public static ControladorFrmGestionarIncidencias controlFrmGestionarIncidencias;
     public static ControladorFrmGestionarDetalleSolucion controlFrmGestionarDetalleSolucion;
     public static ControladorFrmSeguimientoIncidencia controlFrmSeguimientoIncidencia;
-    
-    
+
     public static void main(String[] args) {
         frmLogin = new FrmLogin();
         controlFrmLogin = new ControladorLogin(frmLogin);
     }
-    
+
 }

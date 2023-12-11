@@ -91,27 +91,27 @@ public class DAO_Empleado extends ConectarDB {
 
         return idEmpleado;
     }
-    
+
     //agregado
     public String obtenerNombreEmpleadoPorId(int idEmpleado) {
-    String nombreEmpleado = null; // Valor predeterminado si no se encuentra el nombre del empleado
+        String nombreEmpleado = null; // Valor predeterminado si no se encuentra el nombre del empleado
 
-    try {
-        String query = "SELECT nombreEmpleado FROM tb_empleado WHERE idEmpleado = ?;";
-        ps = conexion.prepareStatement(query);
-        ps.setInt(1, idEmpleado);
-        rs = ps.executeQuery();
+        try {
+            String query = "SELECT nombreEmpleado FROM tb_empleado WHERE idEmpleado = ?;";
+            ps = conexion.prepareStatement(query);
+            ps.setInt(1, idEmpleado);
+            rs = ps.executeQuery();
 
-        if (rs.next()) {
-            nombreEmpleado = rs.getString("nombreEmpleado");
+            if (rs.next()) {
+                nombreEmpleado = rs.getString("nombreEmpleado");
+            }
+
+            //conexion.close();
+        } catch (Exception e) {
+            Mensajes.M1("ERROR al obtener nombre del empleado." + e);
         }
 
-        //conexion.close();
-    } catch (Exception e) {
-        Mensajes.M1("ERROR al obtener nombre del empleado." + e);
+        return nombreEmpleado;
     }
-
-    return nombreEmpleado;
-}
 
 }

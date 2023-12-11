@@ -12,55 +12,55 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class DAO_MantenimientoEmpleados extends ConectarDB{
-    
+public class DAO_MantenimientoEmpleados extends ConectarDB {
+
     public DAO_MantenimientoEmpleados(InterFrameGestionarEmpleados vista) {
         this.vista = vista;
     }
-    
+
     InterFrameGestionarEmpleados vista;
-    
+
     public void MostrarEmpleado(JTable tabla) {
-    String[] titulos = {
-        "ID Empleado", "Nombre", "Apellido", "Género", "Teléfono", "Cargo",
-        "Área", "Fecha Registro", "Sueldo", "Usuario", "Contraseña"
-    };
+        String[] titulos = {
+            "ID Empleado", "Nombre", "Apellido", "Género", "Teléfono", "Cargo",
+            "Área", "Fecha Registro", "Sueldo", "Usuario", "Contraseña"
+        };
 
-    DefaultTableModel modelo = new DefaultTableModel(null, titulos);
-    tabla.setModel(modelo);
-    Empleado em = new Empleado();
+        DefaultTableModel modelo = new DefaultTableModel(null, titulos);
+        tabla.setModel(modelo);
+        Empleado em = new Empleado();
 
-    try {
-        String query = "SELECT e.idEmpleado, e.nombreEmpleado, e.apellidoEmpleado, e.genero, " +
-                "e.telefono, e.cargo, a.nombreArea, e.fechaRegistro, e.sueldo, e.usuario, " +
-                "e.contraseña, e.indicador " +
-                "FROM tb_empleado e " +
-                "INNER JOIN tb_area a ON e.idArea = a.idArea " +
-                "WHERE e.indicador = 'S';";
+        try {
+            String query = "SELECT e.idEmpleado, e.nombreEmpleado, e.apellidoEmpleado, e.genero, "
+                    + "e.telefono, e.cargo, a.nombreArea, e.fechaRegistro, e.sueldo, e.usuario, "
+                    + "e.contraseña, e.indicador "
+                    + "FROM tb_empleado e "
+                    + "INNER JOIN tb_area a ON e.idArea = a.idArea "
+                    + "WHERE e.indicador = 'S';";
 
-        rs = st.executeQuery(query);
+            rs = st.executeQuery(query);
 
-        while (rs.next()) {
-            Object[] fila = {
-                rs.getInt("idEmpleado"),
-                rs.getString("nombreEmpleado"),
-                rs.getString("apellidoEmpleado"),
-                rs.getString("genero"),
-                rs.getString("telefono"),
-                rs.getString("cargo"),
-                rs.getString("nombreArea"), // Nombre del área en vez de ID
-                rs.getDate("fechaRegistro"),
-                rs.getDouble("sueldo"),
-                rs.getString("usuario"),
-                rs.getString("contraseña")
-            };
+            while (rs.next()) {
+                Object[] fila = {
+                    rs.getInt("idEmpleado"),
+                    rs.getString("nombreEmpleado"),
+                    rs.getString("apellidoEmpleado"),
+                    rs.getString("genero"),
+                    rs.getString("telefono"),
+                    rs.getString("cargo"),
+                    rs.getString("nombreArea"), // Nombre del área en vez de ID
+                    rs.getDate("fechaRegistro"),
+                    rs.getDouble("sueldo"),
+                    rs.getString("usuario"),
+                    rs.getString("contraseña")
+                };
 
-            modelo.addRow(fila);
-        }
-    } catch (Exception e) {
-        Mensajes.M1("ERROR al mostrar los Empleados" + e);
-    } finally {
-        // Cerrar el Statement y el ResultSet
+                modelo.addRow(fila);
+            }
+        } catch (Exception e) {
+            Mensajes.M1("ERROR al mostrar los Empleados" + e);
+        } finally {
+            // Cerrar el Statement y el ResultSet
             try {
                 if (rs != null) {
                     rs.close();
@@ -71,11 +71,9 @@ public class DAO_MantenimientoEmpleados extends ConectarDB{
             } catch (SQLException ex) {
                 Mensajes.M1("Error al cerrar el ResultSet o Statement" + ex);
             }
+        }
     }
-}
 
-
-    
     public void ActualizarEmpleado(Empleado em) {
         try {
             ps = conexion.prepareStatement("UPDATE tb_empleado SET nombreEmpleado=?,apellidoEmpleado=?,genero=?,"
@@ -106,7 +104,7 @@ public class DAO_MantenimientoEmpleados extends ConectarDB{
             }
         }
     }
-    
+
     public void EliminarEmpleado(int idCat) {
         try {
             ps = conexion.prepareStatement("UPDATE tb_empleado SET indicador='N' "
@@ -172,31 +170,30 @@ public class DAO_MantenimientoEmpleados extends ConectarDB{
                 if (e.getClickCount() == 1) {
                     JTable tabla = (JTable) e.getSource();
                     int row = tabla.getSelectedRow();
-                    int idEmpleado = (int) tabla.getValueAt(row, 0); 
+                    int idEmpleado = (int) tabla.getValueAt(row, 0);
                     EnviarDatosEmpleadoSeleccionado(idEmpleado);
                 }
             }
         });
     }
-    
+
     public void cargarComboGenero() {
         DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
         modelo.addElement("M");
         modelo.addElement("F");
         vista.cbxGeneroEmpleado.setModel(modelo);
     }
-    
-    
+
     //Método para cargar las áreas en el combobox
     public void CargarComboArea() {
         String query = "SELECT * FROM tb_area;";
         try {
-            
+
             st = conexion.createStatement();
             rs = st.executeQuery(query);
             vista.cbxAreaEmpleado.removeAllItems();
-            
-            while (rs.next()) {                
+
+            while (rs.next()) {
                 vista.cbxAreaEmpleado.addItem(rs.getString("nombreArea"));
             }
 
@@ -215,10 +212,10 @@ public class DAO_MantenimientoEmpleados extends ConectarDB{
             }
         }
     }
-    
+
     public ArrayList<String> obtenerAreas() {
         DAO_Area daoArea = new DAO_Area();
         return daoArea.obtenerNombresAreas();
     }
-    
+
 }

@@ -122,11 +122,10 @@ public class DAO_MantenimientoAreas extends ConectarDB {
                 if (e.getClickCount() == 1) {
                     JTable tabla = (JTable) e.getSource();
                     int row = tabla.getSelectedRow();
-                    int idArea = (int) tabla.getValueAt(row, 0); 
+                    int idArea = (int) tabla.getValueAt(row, 0);
                     EnviarDatosAreaSeleccionada(idArea);
                 }
             }
         });
     }
 }
-

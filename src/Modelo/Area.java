@@ -1,9 +1,9 @@
 package Modelo;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Area {
+
     //atributos
     private int idArea;
     private String nombreArea;
@@ -12,33 +12,68 @@ public class Area {
     private Date fechaRegistro;
     private String descripcion;
     private String indicador;
-    
+
     //constructor
-    public Area() {}
-    
+    public Area() {
+    }
+
     //getter and setter
+    public int getIdArea() {
+        return idArea;
+    }
 
-    public int getIdArea() {return idArea;}
-    public void setIdArea(int idArea) {this.idArea = idArea;}
+    public void setIdArea(int idArea) {
+        this.idArea = idArea;
+    }
 
-    public String getNombreArea() {return nombreArea;}
-    public void setNombreArea(String nombreArea) {this.nombreArea = nombreArea;}
+    public String getNombreArea() {
+        return nombreArea;
+    }
 
-    public String getResponsable() {return responsable;}
-    public void setResponsable(String responsable) {this.responsable = responsable;}
+    public void setNombreArea(String nombreArea) {
+        this.nombreArea = nombreArea;
+    }
 
-    public String getUbicacion() {return ubicacion;}
-    public void setUbicacion(String ubicacion) {this.ubicacion = ubicacion;}
+    public String getResponsable() {
+        return responsable;
+    }
 
-    public Date getFechaRegistro() {return fechaRegistro;}
-    public void setFechaRegistro(Date fechaRegistro) {this.fechaRegistro = fechaRegistro;}
+    public void setResponsable(String responsable) {
+        this.responsable = responsable;
+    }
 
-    public String getDescripcion() {return descripcion;}
-    public void setDescripcion(String descripcion) {this.descripcion = descripcion;}
+    public String getUbicacion() {
+        return ubicacion;
+    }
 
-    public String getIndicador() {return indicador;}
-    public void setIndicador(String indicador) {this.indicador = indicador;}
- 
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public Date getFechaRegistro() {
+        return fechaRegistro;
+    }
+
+    public void setFechaRegistro(Date fechaRegistro) {
+        this.fechaRegistro = fechaRegistro;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getIndicador() {
+        return indicador;
+    }
+
+    public void setIndicador(String indicador) {
+        this.indicador = indicador;
+    }
+
     //registrar Area
     public Object[] RegistroArea() {
         Object[] row = {

@@ -3,6 +3,7 @@ package Modelo;
 import java.util.Date;
 
 public class Empleado {
+
     //atributos
     private int idEmpleado;
     private String nombreEmpleado;
@@ -10,19 +11,18 @@ public class Empleado {
     private String genero;
     private String telefono;
     private String cargo;
-    private int area;			
+    private int area;
     private Date fechaRegistro;
     private double sueldo;
     private String usuario;
     private String contraseña;
     private String indicador;
     private String nombreArea;
-    
-    //constructor
-    public Empleado(){}
-    
-    //getter and setter
 
+    //constructor
+    public Empleado() {}
+
+    //getter and setter
     public int getIdEmpleado() {return idEmpleado;}
     public void setIdEmpleado(int idEmpleado) {this.idEmpleado = idEmpleado;}
 
@@ -61,14 +61,13 @@ public class Empleado {
 
     public String getNombreArea() {return nombreArea;}
     public void setNombreArea(String nombreArea) {this.nombreArea = nombreArea;}
-    
-    
+
     //registrar Empleado
-    public Object[] RegistarEmpleado(){
+    public Object[] RegistarEmpleado() {
         Object[] row = {
             idEmpleado, nombreEmpleado, apellidoEmpleado, genero, telefono,
             cargo, area, fechaRegistro, sueldo, usuario, contraseña
-            };
+        };
         return row;
     }
 }

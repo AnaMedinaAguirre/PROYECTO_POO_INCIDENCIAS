@@ -3,8 +3,10 @@ package DAO;
 import Formatos.*;
 import Modelo.*;
 
-public class DAO_Login extends ConectarDB{
-    public DAO_Login() {}
+public class DAO_Login extends ConectarDB {
+
+    public DAO_Login() {
+    }
 
     // Método para verificar las credenciales de inicio de sesión
     public boolean verificarCredenciales(Empleado objeto) {
@@ -12,10 +14,10 @@ public class DAO_Login extends ConectarDB{
         try {
             String query = "SELECT usuario, contraseña FROM tb_empleado WHERE usuario = ? AND contraseña = ?";
             ps = conexion.prepareStatement(query);
-            
+
             ps.setString(1, objeto.getUsuario());
             ps.setString(2, objeto.getContraseña());
-            
+
             rs = ps.executeQuery();
 
             if (rs.next()) {

@@ -11,28 +11,28 @@ import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 import javax.swing.DefaultComboBoxModel;
 
-public class DAO_MantenimientoTipoIncidencia extends ConectarDB{
-    
-    public DAO_MantenimientoTipoIncidencia(InterFrameGestionarTipoIncidencia vista){
+public class DAO_MantenimientoTipoIncidencia extends ConectarDB {
+
+    public DAO_MantenimientoTipoIncidencia(InterFrameGestionarTipoIncidencia vista) {
         this.vista = vista;
     }
-    
+
     InterFrameGestionarTipoIncidencia vista;
-    
-    public void MostrarTipoIncidencia(JTable tabla){
+
+    public void MostrarTipoIncidencia(JTable tabla) {
         String[] titulos = {
             "ID Tipo Inci.", "Nombre", "Categoría", "Fecha Registro",
             "Descripcion"
         };
-        
+
         DefaultTableModel modelo = new DefaultTableModel(null, titulos);
         tabla.setModel(modelo);
-        TipoIncidencia ti= new TipoIncidencia();
-        
+        TipoIncidencia ti = new TipoIncidencia();
+
         try {
             rs = st.executeQuery("SELECT idTipoInci,nombreTipoInci,categoria,fechaRegistro,"
                     + "descripcion,indicador FROM tb_tipoincidencia WHERE indicador='S';");
-            
+
             while (rs.next()) {
                 ti.setIdTipoInci(rs.getInt("idTipoInci"));
                 ti.setNombreTipoInci(rs.getString("nombreTipoInci"));
@@ -42,18 +42,18 @@ public class DAO_MantenimientoTipoIncidencia extends ConectarDB{
                 ti.setIndicador(rs.getString("indicador"));
                 modelo.addRow(ti.RegistrarTipoIncidencia());
             }
-            
+
             conexion.close();
-            
+
         } catch (Exception e) {
             Mensajes.M1("ERROR no se pueden mostrar los Tipos de Incidencia" + e);
         }
     }
-    
+
     public void ActualizarTipoIncidencia(TipoIncidencia ti) {
         try {
             ps = conexion.prepareStatement("UPDATE tb_tipoincidencia SET nombreTipoInci=?,categoria=?,fechaRegistro=?, "
-                                           + "descripcion=? WHERE idTipoInci=?");
+                    + "descripcion=? WHERE idTipoInci=?");
             ps.setString(1, ti.getNombreTipoInci());
             ps.setString(2, ti.getCategoria());
             java.sql.Date sqlDate = new java.sql.Date(ti.getFechaRegistro().getTime());
@@ -77,7 +77,7 @@ public class DAO_MantenimientoTipoIncidencia extends ConectarDB{
             }
         }
     }
-    
+
     public void EliminarTipoIncidencia(int idCat) {
         try {
             ps = conexion.prepareStatement("UPDATE tb_tipoincidencia SET indicador='N' "
@@ -100,7 +100,7 @@ public class DAO_MantenimientoTipoIncidencia extends ConectarDB{
             }
         }
     }
-    
+
     public void EnviarDatosTipoInciSeleccionada(int idTipoInci) {
         try {
             ps = conexion.prepareStatement("SELECT * FROM tb_tipoincidencia WHERE idTipoInci = ?");
@@ -117,7 +117,7 @@ public class DAO_MantenimientoTipoIncidencia extends ConectarDB{
             Mensajes.M1("ERROR al seleccionar tipo de incidencia" + e);
         }
     }
-    
+
     public void configurarMouseListener() {
         vista.tblTipoIncidencias.addMouseListener(new MouseAdapter() {
             @Override
@@ -125,13 +125,13 @@ public class DAO_MantenimientoTipoIncidencia extends ConectarDB{
                 if (e.getClickCount() == 1) {
                     JTable tabla = (JTable) e.getSource();
                     int row = tabla.getSelectedRow();
-                    int idTipoInci = (int) tabla.getValueAt(row, 0); 
+                    int idTipoInci = (int) tabla.getValueAt(row, 0);
                     EnviarDatosTipoInciSeleccionada(idTipoInci);
                 }
             }
         });
     }
-    
+
     public void cargarCategorias() {
         DefaultComboBoxModel<String> modelo = new DefaultComboBoxModel<>();
         modelo.addElement("Software");
