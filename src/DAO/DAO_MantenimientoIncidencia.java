@@ -32,7 +32,8 @@ public class DAO_MantenimientoIncidencia extends ConectarDB {
 
         try {
 
-            String query = "SELECT i.idIncidencia, i.nombreIncidencia, e1.nombreEmpleado AS nombreEmpleado1, e2.nombreEmpleado AS nombreEmpleado2, "
+            String query = "SELECT i.idIncidencia, i.nombreIncidencia, e1.nombreEmpleado "
+                    + "AS nombreEmpleado1, e2.nombreEmpleado AS nombreEmpleado2, "
                     + "i.prioridad, ti.nombreTipoInci, a.nombreArea, i.fechaRegistro, i.descripcion "
                     + "FROM tb_incidencia i "
                     + "INNER JOIN tb_area a ON i.idArea = a.idArea "
