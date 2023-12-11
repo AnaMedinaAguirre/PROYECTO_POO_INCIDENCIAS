@@ -127,8 +127,9 @@ public class DAO_MantenimientoEmpleados extends ConectarDB {
 
     public void EnviarDatosEmpleadoSeleccionado(int idEmpleado) {
         try {
-            //ps = conexion.prepareStatement("SELECT * FROM tb_empleado WHERE idEmpleado = ?");
-            ps = conexion.prepareStatement("SELECT e.*, a.nombreArea FROM tb_empleado e INNER JOIN tb_area a ON e.idArea = a.idArea WHERE e.idEmpleado = ?");
+                                                                                                                                                                                                        //ps = conexion.prepareStatement("SELECT * FROM tb_empleado WHERE idEmpleado = ?");
+            ps = conexion.prepareStatement("SELECT e.*, a.nombreArea FROM tb_empleado e "
+                    + "INNER JOIN tb_area a ON e.idArea = a.idArea WHERE e.idEmpleado = ?");
             ps.setInt(1, idEmpleado);
             rs = ps.executeQuery();
             if (rs.next()) {
