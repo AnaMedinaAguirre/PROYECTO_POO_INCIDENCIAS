@@ -85,7 +85,6 @@ public class ControladorFrmSeguimientoIncidencia implements ActionListener {
                             nombreTipoIncidencia,
                             nombreArea,
                             detalleSolucion.getFechaModificacion()
-                        // Agregar otros campos si es necesario
                         };
                         modelo.addRow(fila);
                     }
