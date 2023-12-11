@@ -2,7 +2,6 @@ package Principal;
 
 import Vista.*;
 import Controlador.*;
-import javax.swing.JFrame;
 
 public class Main {
     
@@ -38,8 +37,6 @@ public class Main {
     public static void main(String[] args) {
         frmLogin = new FrmLogin();
         controlFrmLogin = new ControladorLogin(frmLogin);
-        //frmMenu = new FrmMenu();
-        //controlFrmMenu = new ControladorMenu(frmMenu);
     }
     
 }

@@ -1,5 +1,10 @@
 package Vista;
 
+import DAO.GenerarPDF;
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class FrmMenu extends javax.swing.JFrame {
 
     public FrmMenu() {
@@ -262,7 +267,12 @@ public class FrmMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_MenuItemSeguimientoActionPerformed
 
     private void MenuItemExportarPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemExportarPDFActionPerformed
-
+        GenerarPDF reporte = new GenerarPDF();
+        try {
+            reporte.GenerarPDFIncidencias();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FrmMenu.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_MenuItemExportarPDFActionPerformed
 
     private void MenuItemGestionarIncidenciasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuItemGestionarIncidenciasActionPerformed
